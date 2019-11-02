@@ -1,0 +1,86 @@
+a {
+    color: white !important;
+    text-decoration: none;
+    text-decoration-line: underline !important;
+}
+a::before,
+a::after,
+a:hover {
+    color: white !important;
+    text-decoration: none;
+}
+
+.section {
+    text-align:center;
+    font-size: 3em;
+  }
+  
+.title{
+    position: absolute;
+    top: 150px;
+}
+
+.call-out {
+    
+}
+
+h1{
+    color: white;
+    font-size: 4.5em !important;
+    position: absolute;
+    z-index: 1;
+    text-shadow: 1px 5px 20px slategray;
+    font-family: 'Staatliches', cursive;
+}
+
+p.subhead {
+    color: white;
+    position: absolute;
+    font-size: .25em !important;
+    letter-spacing: 2px;
+    z-index: 1;
+    text-shadow: 1px 5px 20px slategray;
+    top: 225px;
+}
+
+h2 {
+    color: darkslategrey;
+}
+
+p {
+    color: darkslategrey;
+    font-size: .35em !important;
+    text-align: left;
+}
+
+img{
+    width: 120%;
+    position: relative;
+    bottom: 150px;
+    left: 300px;
+}
+
+#sec1 {
+    background-image: url('../img/mainsec.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#sec2 {
+    background-image: url('../img/sec1.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+.home-card {
+    position: absolute;
+    bottom: 0;
+}
+
+ .card {
+     width: 75%;
+ }
+
+ .card-title {
+     text-align: left;
+ }
