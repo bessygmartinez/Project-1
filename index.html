@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="assets/css/fullpage.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <script src="http://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-        crossorigin="anonymous"></script>
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
     <script type="text/javascript" src="/assets/js/fullpage.js"></script>
+    <script src="http://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
@@ -29,15 +29,17 @@
                         <div class="call-out">
                             <div class="verbiage">
                                 <h1 class="animated delay-short flipInX">Scene.It</h1>
-                                <p class="subhead animated delay-short flipInX"><a href="" >Search for New Movies</a> | <a href="" >Search for Movie Reviews</a> | <a href="">Share & vote on your favourites</a></p>
+                                <p class="subhead animated delay-short flipInX"><a href="">Search for New Movies</a> |
+                                    <a href="">Search for Movie Reviews</a> | <a href="">Share & vote on your
+                                        favourites</a></p>
                             </div>
-                            <img class="animated delay-short bounceInRight" src="assets/img/GroovyDoodle.png" alt="">
+                            <img class="animated delay-short bounceInRight hero" src="assets/img/GroovyDoodle.png" alt="">
                         </div>
                     </div>
                 </div>
+                <div id="recommended" class="row no-gutters"></div>
             </div>
         </div>
-
 
         <div id="sec2" class="section">
             <div class="container">
@@ -60,19 +62,21 @@
                 </div>
             </div>
 
-    </div>
+        </div>
 
 
-    <script>
-        new fullpage('#fullpage', {
-            licenseKey: null,
-            //options here
-            autoScrolling: false,
-            scrollHorizontally: true,
-            fitToSection: false,
-            normalScrollElements: true
-        });
-    </script>
+        <script src="assets/js/sceneit.js"></script>
+        <script>
+
+            new fullpage('#fullpage', {
+                licenseKey: null,
+                //options here
+                autoScrolling: false,
+                scrollHorizontally: true,
+                fitToSection: false,
+                normalScrollElement: true
+            });
+        </script>
 </body>
 
 </html>

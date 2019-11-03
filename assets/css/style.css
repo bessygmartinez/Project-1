@@ -13,15 +13,18 @@ a:hover {
 .section {
     text-align:center;
     font-size: 3em;
-  }
-  
-.title{
-    position: absolute;
-    top: 150px;
 }
 
-.call-out {
-    
+.title{
+    position: absolute;
+    top: 250px;
+}
+
+img.hero{
+    width: 120%;
+    position: relative;
+    bottom: 150px;
+    left: 400px;
 }
 
 h1{
@@ -53,12 +56,6 @@ p {
     text-align: left;
 }
 
-img{
-    width: 120%;
-    position: relative;
-    bottom: 150px;
-    left: 300px;
-}
 
 #sec1 {
     background-image: url('../img/mainsec.jpg');
@@ -71,16 +68,45 @@ img{
     background-attachment: fixed;
     background-size: cover;
   }
-  
+
 .home-card {
     position: absolute;
     bottom: 0;
+}  
+
+/* Recommendation card formatting */
+
+.row {
+    margin: 0;
 }
 
- .card {
-     width: 75%;
+.card {
+    height: 113px;
+ }
+
+.recommendation-card {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    min-width: 210px;
+}
+
+#recommendation-3 {
+     margin-right: 0 !important;
  }
 
  .card-title {
      text-align: left;
+ }
+
+ img.movie-poster {
+     width: 75px;
+     margin-top: -1px;
+     margin-bottom: -1px;
+     margin-left: -20px;
+     border-radius: 5px 0 0 5px;
+ }
+
+ #recommended {
+     position: relative;
+     top: 150px;
  }
