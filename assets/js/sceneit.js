@@ -64,6 +64,6 @@ $(document).ready(function () {
                 }
             }
             trendingMovies()
-            setInterval( function(){trendingMovies()}, 10000);
+            setInterval( function(){trendingMovies()}, 12000);
         })
 })

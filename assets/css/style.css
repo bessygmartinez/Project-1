@@ -13,18 +13,26 @@ a:hover {
 .section {
     text-align:center;
     font-size: 3em;
+    padding-top: 125px;
+    padding-bottom: 150px;
+    overflow: hidden;
+}
+
+.call-out {
+    position: absolute;
+    bottom: -120px;
 }
 
 .title{
-    position: absolute;
+    position: relative;
     top: 250px;
 }
 
 img.hero{
-    width: 120%;
+    width: 100%;
     position: relative;
-    bottom: 150px;
-    left: 400px;
+    bottom: 180px;
+    left: 300px;
 }
 
 h1{
@@ -48,6 +56,12 @@ p.subhead {
 
 h2 {
     color: darkslategrey;
+}
+
+h6 {
+    text-align: left;
+    margin-left: -20px;
+    font-size: 14px;
 }
 
 p {
@@ -77,8 +91,8 @@ p {
 /* Trending card formatting */
 
 #trending-movies {
-    position: absolute;
-    top: 550px;
+    position: relative;
+    top: 100px;
     padding-left: 15px;
 }
 
@@ -89,6 +103,7 @@ p {
 #trending {
     position: relative;
     top: 10px;
+    margin-bottom: 100px;
 }
 
 .row {
