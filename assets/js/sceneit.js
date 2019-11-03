@@ -21,7 +21,6 @@ $(document).ready(function () {
                 $("#trending").text("");
 
                 for (let i = 0; i < 4; i++) {
-
                     trendingMovieIndex = Math.floor(Math.random() * 20);
 
                     // console.log("test");
