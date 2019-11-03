@@ -23,7 +23,7 @@ $(document).ready(function () {
                 for (let i = 0; i < 4; i++) {
 
                     trendingMovieIndex = Math.floor(Math.random() * 20);
-                    
+
                     // console.log("test");
                     // console.log(trendingMovieIndex);
                     // console.log(apiResponse[trendingMovieIndex]);
@@ -64,6 +64,6 @@ $(document).ready(function () {
                 }
             }
             trendingMovies()
-            setInterval( function(){trendingMovies()}, 12000);
+            setInterval(function () { trendingMovies() }, 12000);
         })
 })
