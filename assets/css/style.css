@@ -67,14 +67,29 @@ p {
     background-image: url('../img/sec1.jpg');
     background-attachment: fixed;
     background-size: cover;
-  }
+}
 
 .home-card {
     position: absolute;
     bottom: 0;
 }  
 
-/* Recommendation card formatting */
+/* Trending card formatting */
+
+#trending-movies {
+    position: absolute;
+    top: 550px;
+    padding-left: 15px;
+}
+
+#trending-title {
+    text-align: left;
+}
+
+#trending {
+    position: relative;
+    top: 10px;
+}
 
 .row {
     margin: 0;
@@ -84,18 +99,28 @@ p {
     height: 113px;
  }
 
-.recommendation-card {
+#trending-title {
+    color: lightgray;
+    text-shadow: 1px 5px 20px slategray;
+    font-family: 'Staatliches', cursive;
+}
+
+.trending-card {
     margin-left: 10px !important;
     margin-right: 10px !important;
     min-width: 210px;
 }
 
-#recommendation-3 {
-     margin-right: 0 !important;
+#trending-0 {
+    margin-left: 2px !important;
+}
+
+#trending-3 {
+    margin-right: 0 !important;
  }
 
  .card-title {
-     text-align: left;
+    text-align: left;
  }
 
  img.movie-poster {
@@ -104,9 +129,4 @@ p {
      margin-bottom: -1px;
      margin-left: -20px;
      border-radius: 5px 0 0 5px;
- }
-
- #recommended {
-     position: relative;
-     top: 150px;
  }
