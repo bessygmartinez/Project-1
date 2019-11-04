@@ -84,3 +84,58 @@ img{
  .card-title {
      text-align: left;
  }
+
+/* Search Results card formatting */
+
+#search-results {
+    position: relative;
+    top: -100px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.row {
+    margin: 0;
+}
+
+.search-title {
+    color: Black;
+    text-shadow: 1px 5px 20px slategray;
+    font-family: 'Staatliches', cursive;
+}
+
+.search-card {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 210px;
+    height: 100px;
+}
+
+a.search-card {
+    color: Black !important;
+    text-shadow: 1px 5px 20px slategray;
+    font-family: 'Staatliches', cursive;
+}
+
+a.search-card:hover {
+    color: White !important;
+    text-shadow: 1px 5px 20px slategray;
+    font-family: 'Staatliches', cursive;
+}
+
+.search-card:hover {
+    background:rgba(130, 89, 253, 0.1);
+}
+
+.search-title:hover{
+    color: White;
+    text-shadow: 1px 5px 20px slategray;
+    font-family: 'Staatliches', cursive;
+}
+
+#searchresult-0,
+#searchresult-1,
+#searchresult-2,
+#searchresult-3 {
+    padding: 3%;
+}
