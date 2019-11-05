@@ -166,9 +166,19 @@ a.search-card {
     margin:0 !important;
 }
 
+a.search-card:hover {
+    text-align: center;
+    font-size: large;
+    color: white !important;
+    background-color: #706efd;
+    text-shadow: 1px 5px 20px slategray;
+    font-family: 'Staatliches', cursive;
+    margin:0 !important;
+}
+
 #recommendations {
     position: relative;
-    top: 0px;
+    top: 50px;
     margin-left:auto;
     margin-right:auto;
 }
