@@ -1,0 +1,148 @@
+a {
+    color: white !important;
+    text-decoration: none;
+    text-decoration-line: underline !important;
+}
+
+a::before,
+a::after,
+a:hover {
+    color: white !important;
+    text-decoration: none;
+}
+
+.section {
+    text-align:center;
+    font-size: 3em;
+    padding-top: 125px;
+    padding-bottom: 150px;
+    overflow: hidden;
+}
+
+.call-out {
+    position: absolute;
+    bottom: -120px;
+}
+
+.title {
+    position: relative;
+    top: 250px;
+}
+
+img.hero {
+    width: 100%;
+    position: relative;
+    bottom: 180px;
+    left: 300px;
+}
+
+h1 {
+    color: white;
+    font-size: 4.5em !important;
+    position: absolute;
+    z-index: 1;
+    text-shadow: 1px 5px 20px slategray;
+    font-family: 'Staatliches', cursive;
+}
+
+p.subhead {
+    color: white;
+    position: absolute;
+    font-size: .25em !important;
+    letter-spacing: 2px;
+    z-index: 1;
+    text-shadow: 1px 5px 20px slategray;
+    top: 225px;
+}
+
+h2 {
+    color: darkslategrey;
+}
+
+h6 {
+    text-align: left;
+    margin-left: -20px;
+    font-size: 14px;
+}
+
+p {
+    color: darkslategrey;
+    font-size: .35em !important;
+    text-align: left;
+}
+
+
+#sec1 {
+    background-image: url('../img/mainsec.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#sec2 {
+    background-image: url('../img/sec1.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.home-card {
+    position: absolute;
+    bottom: 0;
+}  
+
+/* Trending card formatting */
+
+#trending-movies {
+    position: relative;
+    top: 150px;
+    padding-left: 15px;
+}
+
+#trending-title {
+    text-align: left;
+}
+
+#trending {
+    position: relative;
+    top: 10px;
+    margin-bottom: 100px;
+}
+
+.row {
+    margin: 0;
+}
+
+.card {
+    height: 113px;
+ }
+
+#trending-title {
+    color: lightgray;
+    text-shadow: 1px 5px 20px slategray;
+    font-family: 'Staatliches', cursive;
+}
+
+.trending-card {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    min-width: 210px;
+}
+
+#trending-0 {
+    margin-left: 2px !important;
+}
+
+#trending-3 {
+    margin-right: 0 !important;
+ }
+
+ .card-title {
+    text-align: left;
+ }
+
+ img.movie-poster {
+     width: 75px;
+     margin-top: -1px;
+     margin-bottom: -1px;
+     margin-left: -20px;
+     border-radius: 5px 0 0 5px;
+ }
