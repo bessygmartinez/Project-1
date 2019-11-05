@@ -89,53 +89,56 @@ img{
 
 #search-results {
     position: relative;
-    top: -100px;
-    margin-left:auto;
-    margin-right:auto;
+    top: 100px;
+    padding-left: 15px;
+}
+
+.search-title {
+    text-align: left;
+}
+
+#recommendations {
+    position: relative;
+    top: 10px;
+    margin-bottom: 100px;
 }
 
 .row {
     margin: 0;
 }
 
+.card {
+    height: 113px;
+ }
+
 .search-title {
-    color: Black;
+    color: black;
     text-shadow: 1px 5px 20px slategray;
     font-family: 'Staatliches', cursive;
 }
 
 .search-card {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
     min-width: 210px;
-    height: 100px;
 }
 
-a.search-card {
-    color: Black !important;
-    text-shadow: 1px 5px 20px slategray;
-    font-family: 'Staatliches', cursive;
+#searchresult-0 {
+    margin-left: 2px !important;
 }
 
-a.search-card:hover {
-    color: White !important;
-    text-shadow: 1px 5px 20px slategray;
-    font-family: 'Staatliches', cursive;
-}
-
-.search-card:hover {
-    background:rgba(130, 89, 253, 0.1);
-}
-
-.search-title:hover{
-    color: White;
-    text-shadow: 1px 5px 20px slategray;
-    font-family: 'Staatliches', cursive;
-}
-
-#searchresult-0,
-#searchresult-1,
-#searchresult-2,
 #searchresult-3 {
-    padding: 3%;
-}
+    margin-right: 0 !important;
+ }
+
+ .card-title {
+    text-align: left;
+ }
+
+ img.movie-poster {
+     width: 75px;
+     margin-top: -1px;
+     margin-bottom: -1px;
+     margin-left: -20px;
+     border-radius: 5px 0 0 5px;
+ }
