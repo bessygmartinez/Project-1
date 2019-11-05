@@ -19,13 +19,19 @@ $(document).ready(function () {
 
             function trendingMovies() {
                 $("#trending").text("");
-
+                let movieIndexes = [];
                 for (let i = 0; i < 4; i++) {
-                    trendingMovieIndex = Math.floor(Math.random() * 20);
-
-                    // console.log("test");
-                    // console.log(trendingMovieIndex);
-                    // console.log(apiResponse[trendingMovieIndex]);
+                    let uniqueMovieIndex = false;
+                    while(!uniqueMovieIndex){
+                        trendingMovieIndex = Math.floor(Math.random() * 20);
+                        if(!movieIndexes.includes(trendingMovieIndex)){
+                            uniqueMovieIndex = true;
+                        }
+                    }
+                    movieIndexes.push(trendingMovieIndex);
+                    console.log("test");
+                    console.log(trendingMovieIndex);
+                    console.log(apiResponse[trendingMovieIndex]);
 
                     let movieCard = $("<div>");
                     movieCard.attr("id", "trending-" + i);
@@ -52,6 +58,7 @@ $(document).ready(function () {
                     cardBody.attr("id", "card-body-" + i);
                     cardBody.attr("class", "card-body");
                     cardBody.append("<h6>" + apiResponse[trendingMovieIndex].title + "</h6>");
+                    // cardBody.append("<p>Average Rating" + apiResponse[trendingMovieIndex].vote_average + "</p>");
 
                     movieCard.append(cardRow);
                     cardRow.append(cardImageContainer);
