@@ -146,7 +146,7 @@ h6 {
 
 #search-results {
     position: relative;
-    top: 0px;
+    top: -50px;
     padding: 15px;
 }
 
@@ -157,13 +157,21 @@ h6 {
     font-family: 'Staatliches', cursive;
 }
 
+.search-card {
+    margin-top: 30px !important;
+    margin-left: 30px !important;
+    margin-right: 30px !important;
+    min-width: 200px;
+    padding: 0px;
+}
+
 a.search-card {
     text-align: center;
-    font-size: large;
+    font-size: 0.4em;
     color: black !important;
     text-shadow: 1px 5px 20px slategray;
     font-family: 'Staatliches', cursive;
-    margin:0 !important;
+    margin: 0 !important;
 }
 
 a.search-card:hover {
@@ -179,24 +187,42 @@ a.search-card:hover {
 #recommendations {
     position: relative;
     top: 50px;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left:3%;
 }
 
-.search-card {
-    margin-top: 0px !important;
-    margin-left: 30px !important;
-    margin-right: 30px !important;
-    min-width: 210px;
+#user-input-title {
+    position: absolute;
+    margin-left: 2%;
+    margin-top: 0;
+    font-size: 0.8em;
+    color: black !important;
+    text-shadow: 1px 5px 20px slategray;
+    font-family: 'Staatliches', cursive;
+}
+
+#search-row-0,
+#search-row-1,
+#search-row-2,
+#search-row-3 {
+    margin-top: 0px;
+}
+
+#search-img-container-0,
+#search-img-container-1,
+#search-img-container-2,
+#search-img-container-3 {
+    margin-left:-1px;
+    margin-right:-1px;
 }
 
 img.search-movie-poster  {
-    width: 200px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: auto;
-    margin-right:auto;
-    border-radius: 5px 5px 5px 5px;
+    margin-bottom: 55px;
+    border-radius: 5px;
+    padding: 0px;
+}
+
+p.home-card-text {
+    font-size: 18px;
 }
 
  @media only screen and (max-width: 812px) {
@@ -206,10 +232,25 @@ img.search-movie-poster  {
         bottom: 20px;
         width: 90%;
     }
+
+    #search-results {
+        top: 0px;
+        padding: 15px;
+    }
     
     #recommendations {
         top: -50px;
-        margin-bottom: 20%;
+        margin-bottom: 5%;
+        margin-left: 8%;
+    }
+
+    #user-input-title {
+        top: -1010px;
+        margin-left:20%;
+        font-size: 0.8em;
+        color: black !important;
+        text-shadow: 1px 5px 20px slategray;
+        font-family: 'Staatliches', cursive;
     }
 
     .search-card {
@@ -218,7 +259,7 @@ img.search-movie-poster  {
         margin-left: 50px !important;
         margin-right: 50px !important;
         min-width: 200px;
-        padding: 5px;
+        padding: 0px;
     }
 
  }
@@ -232,10 +273,14 @@ img.search-movie-poster  {
     }
 
     #recommendations {
-        top: 0px;
+        top: -100px;
         margin-bottom: 55%;
         margin-left:auto;
         margin-right:auto;
+    }
+
+    #user-input-title {
+        display: none;
     }
 
  }
