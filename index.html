@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:site_name" content="Scene.It"/>
+    <meta property="og:title" content="Scene.It - Find Your Next Flick"/>
+    <meta property="og:description" content="Find movie recommendations from movies you already love"/>
+    <meta property="og:image" content="assets/img/SceneIt_sharethumb.png">
     <link rel="stylesheet" type="text/css" href="assets/css/fullpage.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -17,7 +21,8 @@
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <link rel="icon" href="assets/img/sceneit_favicon.png" type="image/gif" sizes="32x32">
+    <title>Scene.It</title>
 </head>
 
 <body>
@@ -34,7 +39,7 @@
                                     <a href="">Search for Movie Reviews</a> | <a href="">Share & vote on your
                                         favourites</a></p>
                             </div>
-                            <img class="animated delay-short bounceInRight hero" src="assets/img/GroovyDoodle.png"
+                            <img class="animated delay-short bounceInLeft hero" src="assets/img/GroovyDoodle_film.png"
                                 alt="">
                         </div>
                     </div>
@@ -48,7 +53,8 @@
 
         <div id="sec2" class="section">
             <div class="container">
-                <div id="search-results">
+                <div id="search-results" class="row">
+                    <div id="user-input-title"></div>
                     <div id="recommendations" class="row">
                     </div>
                 </div>
@@ -56,13 +62,14 @@
                     <div class="card col-lg-12">
                         <div class="card-body">
                             <h2 class="card-title">Find your next favorite movie!</h2>
-                            <p>Not sure what you want to watch next? Search for a movie to watch that's comparable to a
-                                movie you already love! When your results pop up, click on a title to watch the trailor.</p>
+                            <p class="home-card-text">Not sure what you want to watch next? Enter a movie title you already love
+                                and we'll give you some comparable suggestions.<br>When your results pop up, click on a title to watch the trailer.
+                            </p>
                             <div class="input-group mb-3">
                                 <input type="text" class="form-control" placeholder="Find a movie to watch"
                                     id="search-input">
                                 <div class="input-group-append">
-                                    <button class="btn btn-dark" type="button" id="search-button">Button</button>
+                                    <button class="btn btn-dark" type="button" id="search-button">Search</button>
                                 </div>
                             </div>
                         </div>
