@@ -104,13 +104,9 @@ h6 {
     margin-bottom: 100px;
 }
 
-.row {
+.trending-row {
     margin: 0;
 }
-
-.card {
-    height: 113px;
- }
 
 #trending-title {
     color: lightgray;
@@ -122,6 +118,7 @@ h6 {
     margin-left: 10px !important;
     margin-right: 10px !important;
     min-width: 210px;
+    height: 113px;
 }
 
 #trending-0 {
@@ -132,7 +129,7 @@ h6 {
     margin-right: 0 !important;
  }
 
- .card-title {
+ .trend-card-title {
     text-align: left;
  }
 
@@ -184,45 +181,4 @@ h6 {
 
 #searchresult-3 {
     margin-right: 0 !important;
- }
-
- .card-title {
-    text-align: left;
- }
-
-.trending-row {
-    margin: 0;
-}
-
-#trending-title {
-    color: lightgray;
-    text-shadow: 1px 5px 20px slategray;
-    font-family: 'Staatliches', cursive;
-}
-
-.trending-card {
-    margin-left: 10px !important;
-    margin-right: 10px !important;
-    min-width: 210px;
-    height: 113px;
-}
-
-#trending-0 {
-    margin-left: 2px !important;
-}
-
-#trending-3 {
-    margin-right: 0 !important;
- }
-
- .trend-card-title {
-    text-align: left;
- }
-
- img.movie-poster {
-     width: 75px;
-     margin-top: -1px;
-     margin-bottom: -1px;
-     margin-left: -20px;
-     border-radius: 5px 0 0 5px;
  }

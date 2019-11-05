@@ -66,18 +66,18 @@ $(document).ready(function () {
 
               //this function fires ...
               .then(function (response2) {
-              console.log(response2);
+                console.log(response2);
 
-              let searchImageContainer = $("<div>");
-              searchImageContainer.attr("id", "search-img-container-" + i);
+                let searchImageContainer = $("<div>");
+                searchImageContainer.attr("id", "search-img-container-" + i);
 
-              let searchImage = $("<img>");
-              searchImage.attr("id", "card-image-" + i);
-              searchImage.attr("class", "movie-poster");
-              searchImage.attr("src", "https://image.tmdb.org/t/p/w300_and_h450_bestv2/" + response2.results[0].poster_path);
+                let searchImage = $("<img>");
+                searchImage.attr("id", "card-image-" + i);
+                searchImage.attr("class", "movie-poster");
+                searchImage.attr("src", "https://image.tmdb.org/t/p/w300_and_h450_bestv2/" + response2.results[0].poster_path);
 
-              searchImageContainer.append(searchImage);
-              cardBody.append(searchImageContainer);
+                searchImageContainer.append(searchImage);
+                cardBody.append(searchImageContainer);
 
               })
           }
