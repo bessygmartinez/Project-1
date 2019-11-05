@@ -1,34 +1,61 @@
+//Begins function upon page load
 $(document).ready(function () {
 
+  //When search-button is clicked...
   $("#search-button").on("click", function () {
 
     console.log("Button Clicked!");
-    $("#search-results").empty();
 
+    //empties out the #recommendations div to make sure only four movies are appended
+    $("#recommendations").empty();
+
+    //This variable holds the value of whatever the user enters in the search bar
     const searchInput = $("#search-input").val().trim();
 
     console.log(searchInput);
 
+    //clears the search bar after the search-button is clicked
     $("#search-input").val("");
+
+    //sets the placeholder back to "find a movie to watch"
     $("#search-input").attr("placeholder", "Find a movie to watch");
 
-    //sends request to Taste Dive
+    //sends request to TasteDive with whatever the user entered in the search bar
     const queryURL = "https://tastedive.com/api/similar?info=1&q=" + searchInput + "&key=348832-SceneIt-PVCNCAHY";
 
-    //AJAX grabs the data and then ...
+    //AJAX grabs the data and then...
     $.ajax({
       url: queryURL,
       method: "GET"
     })
 
-      //this function fires ...
+      //this function fires...
       .then(function (response) {
 
         console.log(response);
 
         function tasteDiveMovie() {
+
+          //Variable to hold the indexes of the movies chosen
+          let recommendationIndexes = [];
+          
+          //For loop to choose 4 random movies from the response we get back from TasteDive
           for (let i = 0; i < 4; i++) {
-            tasteDiveMovieIndex = Math.floor((Math.random() * 20));
+
+            //Sets if chosen movie is uniqie (has not been chosen already)
+            let uniqueMovieIndex = false;
+
+            //Checks if movie chosen is already on chosen list
+            //If movie was already chosen choose new movie and check again
+            while (!uniqueMovieIndex){
+              tasteDiveMovieIndex = Math.floor((Math.random() * 20));
+                      
+            //if movie was not already chosen, it is unique, continue with generating card.
+            if (!recommendationIndexes.includes(tasteDiveMovieIndex)){
+                uniqueMovieIndex = true;
+              }
+            }
+            recommendationIndexes.push(tasteDiveMovieIndex);
 
             let movieRecommendation = response.Similar.Results[tasteDiveMovieIndex].Name;
             console.log(movieRecommendation);
@@ -54,7 +81,7 @@ $(document).ready(function () {
             cardRow.append(cardBodyContainer);
             cardBodyContainer.append(cardBody);
 
-            $("#search-results").append(movieCard);
+            $("#recommendations").append(movieCard);
 
             const queryURL2 = "https://api.themoviedb.org/3/search/movie?api_key=33d4301a92067b28681045ddd01c67ad&language=en-US&query=" + response.Similar.Results[tasteDiveMovieIndex].Name + "&page=1&include_adult=false";
 
@@ -73,7 +100,7 @@ $(document).ready(function () {
 
                 let searchImage = $("<img>");
                 searchImage.attr("id", "card-image-" + i);
-                searchImage.attr("class", "movie-poster");
+                searchImage.attr("class", "search-movie-poster img-fluid");
                 searchImage.attr("src", "https://image.tmdb.org/t/p/w300_and_h450_bestv2/" + response2.results[0].poster_path);
 
                 searchImageContainer.append(searchImage);
