@@ -18,12 +18,24 @@ $(document).ready(function () {
             apiResponse = response.results;
 
             function trendingMovies() {
+                //Clears trending movie areas
                 $("#trending").text("");
+
+                //Creates array to hold randomly chosen movie
                 let movieIndexes = [];
+
+                //for loop to randomly choose 4 trending movies
                 for (let i = 0; i < 4; i++) {
+
+                    //Sets if chosen movie is uniqie (has not been chosen already)
                     let uniqueMovieIndex = false;
+
+                    //Checks if movie chosen is already on chosen list
+                    //If movie was already chosen choose new movie and check again
                     while(!uniqueMovieIndex){
                         trendingMovieIndex = Math.floor(Math.random() * 20);
+                        
+                        //if movie was not already chosen, it is unique, continue with generating card.
                         if(!movieIndexes.includes(trendingMovieIndex)){
                             uniqueMovieIndex = true;
                         }
