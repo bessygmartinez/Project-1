@@ -4,15 +4,21 @@ $(document).ready(function () {
   //When search-button is clicked...
   $("#search-button").on("click", function () {
 
+    //empties out the #recommendations and #user-input-title divs
+    $("#recommendations").empty();
+    $("#user-input-title").empty();
+
     console.log("Button Clicked!");
 
-    //empties out the #recommendations div to make sure only four movies are appended
-    $("#recommendations").empty();
-
     //This variable holds the value of whatever the user enters in the search bar
-    const searchInput = $("#search-input").val().trim();
+    const userInput = $("#search-input").val().trim();
 
-    console.log(searchInput);
+    let userInputTitle = $("#user-input-title");
+    userInputTitle.attr("class", "row");
+    userInputTitle.append("Movies like " + userInput + ":");
+    $("#search-results").append(userInputTitle);
+
+    console.log(userInput); 
 
     //clears the search bar after the search-button is clicked
     $("#search-input").val("");
@@ -21,7 +27,7 @@ $(document).ready(function () {
     $("#search-input").attr("placeholder", "Find a movie to watch");
 
     //sends request to TasteDive with whatever the user entered in the search bar
-    const queryURL = "https://tastedive.com/api/similar?info=1&q=" + searchInput + "&key=348832-SceneIt-PVCNCAHY";
+    const queryURL = "https://tastedive.com/api/similar?info=1&q=" + userInput + "&key=348832-SceneIt-PVCNCAHY&type=movies";
 
     //AJAX grabs the data and then...
     $.ajax({
@@ -70,12 +76,11 @@ $(document).ready(function () {
 
             let cardBodyContainer = $("<div>");
             cardBodyContainer.attr("id", "search-body-container-" + i);
-            cardBodyContainer.attr("class", "");
 
             let cardBody = $("<div>");
             cardBody.attr("id", "search-body-" + i);
             cardBody.attr("class", "search-title");
-            cardBody.append("<h3><a href=" + response.Similar.Results[tasteDiveMovieIndex].yUrl + " target='_blank' class='search-card'>" + response.Similar.Results[tasteDiveMovieIndex].Name + "</a></h3>");
+            cardBody.append("<a href=" + response.Similar.Results[tasteDiveMovieIndex].yUrl + " target='_blank' class='search-card'>" + response.Similar.Results[tasteDiveMovieIndex].Name + "</a>");
 
             movieCard.append(cardRow);
             cardRow.append(cardBodyContainer);
