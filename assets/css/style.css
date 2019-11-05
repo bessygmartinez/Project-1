@@ -1,13 +1,13 @@
 a {
-    color: white !important;
+    color: white;
     text-decoration: none;
-    text-decoration-line: underline !important;
+    text-decoration-line: underline;
 }
 
 a::before,
 a::after,
 a:hover {
-    color: white !important;
+    color: white;
     text-decoration: none;
 }
 
@@ -38,7 +38,7 @@ img.hero {
 
 h1 {
     color: white;
-    font-size: 4.5em !important;
+    font-size: 4.5em;
     position: absolute;
     z-index: 1;
     text-shadow: 1px 5px 20px slategray;
@@ -55,6 +55,10 @@ p.subhead {
     top: 225px;
 }
 
+p {
+    font-size: 12px;
+}
+
 h2 {
     color: darkslategrey;
 }
@@ -64,13 +68,6 @@ h6 {
     margin-left: -20px;
     font-size: 14px;
 }
-
-p {
-    color: darkslategrey;
-    font-size: .35em !important;
-    text-align: left;
-}
-
 
 #sec1 {
     background-image: url('../img/mainsec.jpg');
@@ -107,13 +104,9 @@ p {
     margin-bottom: 100px;
 }
 
-.row {
+.trending-row {
     margin: 0;
 }
-
-.card {
-    height: 113px;
- }
 
 #trending-title {
     color: lightgray;
@@ -125,6 +118,7 @@ p {
     margin-left: 10px !important;
     margin-right: 10px !important;
     min-width: 210px;
+    height: 113px;
 }
 
 #trending-0 {
@@ -135,7 +129,7 @@ p {
     margin-right: 0 !important;
  }
 
- .card-title {
+ .trend-card-title {
     text-align: left;
  }
 
