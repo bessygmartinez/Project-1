@@ -83,7 +83,8 @@ h6 {
 
 .home-card {
     position: absolute;
-    bottom: 0;
+    bottom:0;
+    width: 75%;
 }  
 
 /* Trending card formatting */
@@ -145,40 +146,86 @@ h6 {
 
 #search-results {
     position: relative;
-    top: 100px;
-    padding-left: 15px;
+    top: 0px;
+    padding: 15px;
 }
 
 .search-title {
-    text-align: left;
-}
-
-#recommendations {
-    position: relative;
-    top: 10px;
-    margin-bottom: 100px;
-}
-
-.row {
-    margin: 0;
-}
-
-.search-title {
+    text-align: center;
     color: black;
     text-shadow: 1px 5px 20px slategray;
     font-family: 'Staatliches', cursive;
 }
 
+a.search-card {
+    text-align: center;
+    font-size: large;
+    color: black !important;
+    text-shadow: 1px 5px 20px slategray;
+    font-family: 'Staatliches', cursive;
+    margin:0 !important;
+}
+
+#recommendations {
+    position: relative;
+    top: 0px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
 .search-card {
-    margin-left: 10px !important;
-    margin-right: 10px !important;
+    margin-top: 0px !important;
+    margin-left: 30px !important;
+    margin-right: 30px !important;
     min-width: 210px;
 }
 
-#searchresult-0 {
-    margin-left: 2px !important;
+img.search-movie-poster  {
+    width: 200px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right:auto;
+    border-radius: 5px 5px 5px 5px;
 }
 
-#searchresult-3 {
-    margin-right: 0 !important;
+ @media only screen and (max-width: 812px) {
+
+    .home-card {
+        position: absolute;
+        bottom: 20px;
+        width: 90%;
+    }
+    
+    #recommendations {
+        top: -50px;
+        margin-bottom: 20%;
+    }
+
+    .search-card {
+        margin-top: 0px !important;
+        margin-top: 50px !important;
+        margin-left: 50px !important;
+        margin-right: 50px !important;
+        min-width: 200px;
+        padding: 5px;
+    }
+
+ }
+ 
+ @media only screen and (max-width: 375px) {
+
+    .home-card {
+        position: absolute;
+        bottom: 30px;
+        width: 100%;
+    }
+
+    #recommendations {
+        top: 0px;
+        margin-bottom: 55%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
  }
