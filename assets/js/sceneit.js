@@ -12,7 +12,6 @@ $(document).ready(function () {
         url: queryURL,
         method: "GET"
     })
-
         //After data from ajax get comes back
         .then(function (response) {
             apiResponse = response.results;
