@@ -84,6 +84,13 @@ p {
     background-size: cover;
 }
 
+#sec4 {
+    background-image: url('../img/sec1.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
 .home-card {
     position: absolute;
     bottom: 0;
