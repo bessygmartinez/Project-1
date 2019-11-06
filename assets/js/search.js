@@ -18,7 +18,7 @@ $(document).ready(function () {
     userInputTitle.append("Movies like " + userInput + ":");
     $("#search-results").append(userInputTitle);
 
-    console.log(userInput); 
+    console.log(userInput);
 
     //clears the search bar after the search-button is clicked
     $("#search-input").val("");
@@ -40,11 +40,19 @@ $(document).ready(function () {
 
         console.log(response);
 
+        if (response.Similar.Results.length === 0) {
+          console.log("Sorry! No Matches!")
+          let noMatches = $("#recommendations");
+          noMatches.attr("class", "row");
+          noMatches.text("Sorry! No matches found. Please try another movie.");
+          $("#recommendations").append(noMatches);
+        }
+
         function tasteDiveMovie() {
 
           //Variable to hold the indexes of the movies chosen
           let recommendationIndexes = [];
-          
+
           //For loop to choose 4 random movies from the response we get back from TasteDive
           for (let i = 0; i < 4; i++) {
 
@@ -53,21 +61,14 @@ $(document).ready(function () {
 
             //Checks if movie chosen is already on chosen list
             //If movie was already chosen choose new movie and check again
-            while (!uniqueMovieIndex){
+            while (!uniqueMovieIndex) {
               tasteDiveMovieIndex = Math.floor((Math.random() * 20));
-                      
-            //if movie was not already chosen, it is unique, continue with generating card.
-            if (!recommendationIndexes.includes(tasteDiveMovieIndex)){
+
+              //if movie was not already chosen, it is unique, continue with generating card.
+              if (!recommendationIndexes.includes(tasteDiveMovieIndex)) {
                 uniqueMovieIndex = true;
               }
 
-            if (recommendationIndexes >= 0) {
-              console.log("Sorry! No Matches!")
-              let noMatches = $("#recommendations");
-              noMatches.attr("class", "row");
-              noMatches.text("Sorry! No matches found. Please try another movie.");
-              $("#recommendations").append(noMatches);
-            }
             }
             recommendationIndexes.push(tasteDiveMovieIndex);
 
