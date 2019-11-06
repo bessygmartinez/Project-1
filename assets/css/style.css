@@ -151,43 +151,44 @@ h6 {
 }
 
 .search-title {
-    text-align: center;
     color: black;
     text-shadow: 1px 5px 20px slategray;
     font-family: 'Staatliches', cursive;
+    margin-top: 5%;
 }
 
 .search-card {
+    font-size: 3.5vh;
     margin-top: 30px !important;
     margin-left: 30px !important;
-    margin-right: 30px !important;
-    min-width: 200px;
-    padding: 0px;
+    min-width: 230px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    line-height: 1;
 }
 
 a.search-card {
     text-align: center;
-    font-size: 0.4em;
     color: black !important;
     text-shadow: 1px 5px 20px slategray;
     font-family: 'Staatliches', cursive;
-    margin: 0 !important;
+    margin: 5px !important;
 }
 
 a.search-card:hover {
     text-align: center;
-    font-size: large;
     color: white !important;
     background-color: #706efd;
     text-shadow: 1px 5px 20px slategray;
     font-family: 'Staatliches', cursive;
-    margin:0 !important;
+    margin: 5px !important;
 }
 
 #recommendations {
     position: relative;
     top: 50px;
-    margin-left:3%;
+    margin-left:2%;
 }
 
 #user-input-title {
@@ -200,25 +201,18 @@ a.search-card:hover {
     font-family: 'Staatliches', cursive;
 }
 
-#search-row-0,
-#search-row-1,
-#search-row-2,
-#search-row-3 {
-    margin-top: 0px;
-}
-
-#search-img-container-0,
-#search-img-container-1,
-#search-img-container-2,
-#search-img-container-3 {
+#search-body-container-0,
+#search-body-container-1,
+#search-body-container-2,
+#search-body-container-3 {
     margin-left:-1px;
     margin-right:-1px;
 }
 
 img.search-movie-poster  {
-    margin-bottom: 55px;
-    border-radius: 5px;
-    padding: 0px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    padding-bottom: 55px;
 }
 
 p.home-card-text {
@@ -229,7 +223,7 @@ p.home-card-text {
 
     .home-card {
         position: absolute;
-        bottom: 20px;
+        margin-bottom: 20px;
         width: 90%;
     }
 
@@ -240,13 +234,14 @@ p.home-card-text {
     
     #recommendations {
         top: -50px;
-        margin-bottom: 5%;
+        margin-bottom: 10%;
         margin-left: 8%;
     }
 
     #user-input-title {
-        top: -1010px;
-        margin-left:20%;
+        position: absolute;
+        margin-left: 15%;
+        margin-top: -10%;
         font-size: 0.8em;
         color: black !important;
         text-shadow: 1px 5px 20px slategray;
@@ -254,6 +249,7 @@ p.home-card-text {
     }
 
     .search-card {
+        font-size: 6vh;
         margin-top: 0px !important;
         margin-top: 50px !important;
         margin-left: 50px !important;
@@ -281,6 +277,29 @@ p.home-card-text {
 
     #user-input-title {
         display: none;
+    }
+
+    .search-card {
+        font-size: 3vh;
+    }
+
+    a.search-card {
+        text-align: center;
+        font-size: 3vh;
+        color: black !important;
+        text-shadow: 1px 5px 20px slategray;
+        font-family: 'Staatliches', cursive;
+        margin: 0px !important;
+    }
+    
+    a.search-card:hover {
+        text-align: center;
+        font-size: 3vh;
+        color: white !important;
+        background-color: #706efd;
+        text-shadow: 1px 5px 20px slategray;
+        font-family: 'Staatliches', cursive;
+        margin: 0px !important;
     }
 
  }
