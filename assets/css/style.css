@@ -171,15 +171,16 @@ p {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 450px;
+    height: 335gitpx;
     width: 100%;
     opacity: 0;
     transition: .5s ease;
     background-color: rgba(243, 239, 239, 0.76);
   }
   
-  .container:hover .overlay {
+  .card:hover .overlay {
     opacity: 1;
+    cursor: pointer;
   }
   
   .card-text {
