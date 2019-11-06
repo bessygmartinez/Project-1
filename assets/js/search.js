@@ -13,10 +13,7 @@ $(document).ready(function () {
     //This variable holds the value of whatever the user enters in the search bar
     const userInput = $("#search-input").val().trim();
 
-    let userInputTitle = $("#user-input-title");
-    userInputTitle.attr("class", "row");
-    userInputTitle.append("Movies like " + userInput + ":");
-    $("#search-results").append(userInputTitle);
+
 
     console.log(userInput);
 
@@ -41,11 +38,18 @@ $(document).ready(function () {
         console.log(response);
 
         if (response.Similar.Results.length === 0) {
-          console.log("Sorry! No Matches!")
-          let noMatches = $("#recommendations");
-          noMatches.attr("class", "row");
-          noMatches.text("Sorry! No matches found. Please try another movie.");
-          $("#recommendations").append(noMatches);
+
+          $("#user-input-title").empty();
+
+          $('#no-matches-modal').modal({
+            show:true
+          })
+
+          // console.log("Sorry! No Matches!")
+          // let noMatches = $("#recommendations");
+          // noMatches.attr("class", "row");
+          // noMatches.text("Sorry! No matches found. Please try another movie.");
+          // $("#recommendations").append(noMatches);
         }
 
         function tasteDiveMovie() {
@@ -122,6 +126,10 @@ $(document).ready(function () {
 
               })
           }
+          let userInputTitle = $("#user-input-title");
+          userInputTitle.attr("class", "row");
+          userInputTitle.append("Movies like " + userInput + ":");
+          $("#search-results").append(userInputTitle);
         }
         tasteDiveMovie();
       });
