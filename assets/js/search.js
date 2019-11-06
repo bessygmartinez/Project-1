@@ -60,6 +60,14 @@ $(document).ready(function () {
             if (!recommendationIndexes.includes(tasteDiveMovieIndex)){
                 uniqueMovieIndex = true;
               }
+
+            if (recommendationIndexes >= 0) {
+              console.log("Sorry! No Matches!")
+              let noMatches = $("#recommendations");
+              noMatches.attr("class", "row");
+              noMatches.text("Sorry! No matches found. Please try another movie.");
+              $("#recommendations").append(noMatches);
+            }
             }
             recommendationIndexes.push(tasteDiveMovieIndex);
 
