@@ -241,7 +241,7 @@ p.home-card-text {
     #user-input-title {
         position: absolute;
         margin-left: 15%;
-        margin-top: -10%;
+        margin-top: -15%;
         font-size: 0.8em;
         color: black !important;
         text-shadow: 1px 5px 20px slategray;
