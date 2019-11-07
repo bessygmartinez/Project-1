@@ -187,15 +187,14 @@ p {
     color:black;
     font-size: 10px;
     position: absolute;
-    top: 45%;
+    top: 35%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
-    width: 90%;
-    height: 80%;
-    vertical-align: text-top;
+    width: 95%;
+    vertical-align: middle;
   }
 
   #tpageHead{
@@ -212,4 +211,12 @@ color: white;
 text-shadow: 1px 5px 20px slategray;
 font-family: 'Staatliches', cursive;
 text-align: center;
+  }
+  .movie
+  {
+   
+    font-style: italic;
+    position: absolute;
+    top: 54%;
+    left: 25%;
   }
