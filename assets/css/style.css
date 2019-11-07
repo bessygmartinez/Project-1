@@ -1,13 +1,13 @@
 a {
-    color: white !important;
+    color: white;
     text-decoration: none;
-    text-decoration-line: underline !important;
+    text-decoration-line: underline;
 }
 
 a::before,
 a::after,
 a:hover {
-    color: white !important;
+    color: white;
     text-decoration: none;
 }
 
@@ -38,7 +38,7 @@ img.hero {
 
 h1 {
     color: white;
-    font-size: 4.5em !important;
+    font-size: 4.5em;
     position: absolute;
     z-index: 1;
     text-shadow: 1px 5px 20px slategray;
@@ -55,6 +55,10 @@ p.subhead {
     top: 225px;
 }
 
+p {
+    font-size: 12px;
+}
+
 h2 {
     color: darkslategrey;
 }
@@ -64,13 +68,6 @@ h6 {
     margin-left: -20px;
     font-size: 14px;
 }
-
-p {
-    color: darkslategrey;
-    font-size: .35em !important;
-    text-align: left;
-}
-
 
 #sec1 {
     background-image: url('../img/mainsec.jpg');
@@ -93,7 +90,8 @@ p {
 
 .home-card {
     position: absolute;
-    bottom: 0;
+    bottom:0;
+    width: 75%;
 }  
 
 /* Trending card formatting */
@@ -114,13 +112,9 @@ p {
     margin-bottom: 100px;
 }
 
-.row {
+.trending-row {
     margin: 0;
 }
-
-.card {
-    height: 113px;
- }
 
 #trending-title {
     color: lightgray;
@@ -132,6 +126,7 @@ p {
     margin-left: 10px !important;
     margin-right: 10px !important;
     min-width: 210px;
+    height: 113px;
 }
 
 #trending-0 {
@@ -142,7 +137,7 @@ p {
     margin-right: 0 !important;
  }
 
- .card-title {
+ .trend-card-title {
     text-align: left;
  }
 
@@ -220,3 +215,164 @@ text-align: center;
     top: 54%;
     left: 25%;
   }
+ /* Search Results card formatting */
+
+#search-results {
+    position: relative;
+    top: -50px;
+    padding: 15px;
+}
+
+.search-title {
+    color: black;
+    text-shadow: 1px 5px 20px slategray;
+    font-family: 'Staatliches', cursive;
+    margin-top: 5%;
+}
+
+.search-card {
+    font-size: 3.5vh;
+    margin-top: 30px !important;
+    margin-left: 30px !important;
+    min-width: 230px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    line-height: 1;
+}
+
+a.search-card {
+    text-align: center;
+    color: black !important;
+    text-shadow: 1px 5px 20px slategray;
+    font-family: 'Staatliches', cursive;
+    margin: 5px !important;
+}
+
+a.search-card:hover {
+    text-align: center;
+    color: white !important;
+    background-color: #706efd;
+    text-shadow: 1px 5px 20px slategray;
+    font-family: 'Staatliches', cursive;
+    margin: 5px !important;
+}
+
+#recommendations {
+    position: relative;
+    top: 50px;
+    margin-left:2%;
+}
+
+#user-input-title {
+    position: absolute;
+    margin-left: 2%;
+    margin-top: 0;
+    font-size: 0.8em;
+    color: black !important;
+    text-shadow: 1px 5px 20px slategray;
+    font-family: 'Staatliches', cursive;
+}
+
+#search-body-container-0,
+#search-body-container-1,
+#search-body-container-2,
+#search-body-container-3 {
+    margin-left:-1px;
+    margin-right:-1px;
+}
+
+img.search-movie-poster  {
+    margin-top: 15px;
+    margin-bottom: 0px;
+    padding-bottom: 55px;
+}
+
+p.home-card-text {
+    font-size: 18px;
+}
+
+ @media only screen and (max-width: 812px) {
+
+    .home-card {
+        position: absolute;
+        margin-bottom: 20px;
+        width: 90%;
+    }
+
+    #search-results {
+        top: 0px;
+        padding: 15px;
+    }
+    
+    #recommendations {
+        top: -50px;
+        margin-bottom: 10%;
+        margin-left: 8%;
+    }
+
+    #user-input-title {
+        position: absolute;
+        margin-left: 15%;
+        margin-top: -15%;
+        font-size: 0.8em;
+        color: black !important;
+        text-shadow: 1px 5px 20px slategray;
+        font-family: 'Staatliches', cursive;
+    }
+
+    .search-card {
+        font-size: 6vh;
+        margin-top: 0px !important;
+        margin-top: 50px !important;
+        margin-left: 50px !important;
+        margin-right: 50px !important;
+        min-width: 200px;
+        padding: 0px;
+    }
+
+ }
+ 
+ @media only screen and (max-width: 375px) {
+
+    .home-card {
+        position: absolute;
+        bottom: 30px;
+        width: 100%;
+    }
+
+    #recommendations {
+        top: -100px;
+        margin-bottom: 55%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    #user-input-title {
+        display: none;
+    }
+
+    .search-card {
+        font-size: 3vh;
+    }
+
+    a.search-card {
+        text-align: center;
+        font-size: 3vh;
+        color: black !important;
+        text-shadow: 1px 5px 20px slategray;
+        font-family: 'Staatliches', cursive;
+        margin: 0px !important;
+    }
+    
+    a.search-card:hover {
+        text-align: center;
+        font-size: 3vh;
+        color: white !important;
+        background-color: #706efd;
+        text-shadow: 1px 5px 20px slategray;
+        font-family: 'Staatliches', cursive;
+        margin: 0px !important;
+    }
+
+ }
