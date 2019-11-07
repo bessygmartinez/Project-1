@@ -81,6 +81,12 @@ h6 {
     background-size: cover;
 }
 
+#sec3 {
+    background-image: url('../img/sec3.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 .home-card {
     position: absolute;
     bottom:0;
