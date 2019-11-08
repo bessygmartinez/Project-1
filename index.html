@@ -9,23 +9,25 @@
     <meta property="og:title" content="Scene.It - Find Your Next Flick" />
     <meta property="og:description" content="Find movie recommendations from movies you already love" />
     <meta property="og:image" content="assets/img/SceneIt_sharethumb.png">
-    <link rel="stylesheet" type="text/css" href="assets/css/fullpage.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <script type="text/javascript" src="/assets/js/fullpage.js"></script>
+
     <script src="http://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" type="text/css" href="assets/css/fullpage.css">
+        <script type="text/javascript" src="/assets/js/fullpage.js"></script>
+        
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="/assets/css/style.css">
+
     <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
     <link rel="icon" href="assets/img/sceneit_favicon.png" type="image/gif" sizes="32x32">
-    <title>Scene.It</title>
+    <title>Scene.It - Your favorite movies</title>
 </head>
 
 <body>
@@ -103,7 +105,35 @@
                     </div>
                 </div>
             </div>
+            </div>
 
+
+            <!--- Begin Favorites Section --->
+
+            <div id="sec3" class="section"> 
+                <div class="container">
+                              <div id="user-favorites" class="row mx-auto">
+                              </div>
+
+                              <div class="push"></div>
+
+                              <div class="row home-card fav-search" id="search-bar">
+                                  <div class="card col-lg-12">
+                                      <div class="card-body">
+                                          <h2 class="card-title">Keep a list of your favorite movies!</h2>
+                                          <p class="home-card-text">Always forgetting the names of your favorite movies?<br>Or do you just want to have a list of the best films you've seen?<br>Look no further - search and add your favourite films.
+                                          </p>
+                                          <div class="input-group mb-3">
+                                              <input type="text" class="form-control" placeholder="What movie would you like to add?"
+                                                  id="fav-input">
+                                              <div class="input-group-append">
+                                                  <button class="btn btn-dark" type="button" id="add-favorite">Search</button>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
         </div>
     <!--Team Page-->
     <div id="sec4" class="section">
@@ -158,19 +188,27 @@
 
                 </div>
 
+<script>
+    new fullpage('#fullpage', {
+        licenseKey: null,
+        //options here
+        autoScrolling: false,
+        scrollHorizontally: true,
+        fitToSection: false,
+        navigation: true,
+        paddingTop: '60px'
+    });
+</script>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+<!-- <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase.js"></script> -->
+
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-database.js"></script>
+
         <script src="assets/js/sceneit.js"></script>
         <script src="assets/js/search.js"></script>
-        <script>
-
-            new fullpage('#fullpage', {
-                licenseKey: null,
-                //options here
-                autoScrolling: false,
-                scrollHorizontally: true,
-                fitToSection: false,
-                normalScrollElement: true
-            });
-        </script>
+        <script src="assets/js/favorites.js"></script>
+        
 </body>
 
 </html>
