@@ -37,7 +37,7 @@ $(document).ready(function () {
 
         console.log(response);
 
-        if (response.Similar.Results.length === 0) {
+        if (response.Similar.Results.length <= 3) {
 
           $("#user-input-title").empty();
 
