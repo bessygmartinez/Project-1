@@ -87,6 +87,12 @@ h6 {
     background-size: cover;
 }
 
+#sec4 {
+    background-image: url('../img/sec1.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 .home-card {
     position: absolute;
     bottom:0;
@@ -148,6 +154,72 @@ h6 {
      border-radius: 5px 0 0 5px;
  }
 
+ #effects {
+    position: relative;
+    width: 50%;
+  }
+  
+  .card-img-top {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 335px;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(243, 239, 239, 0.76);
+  }
+  
+  .card:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+  }
+  
+  .card-text {
+    color:black;
+    font-size: 10px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 95%;
+    vertical-align: middle;
+  }
+
+  #tpageHead{
+  color: white;
+  font-size: 1.5em !important;
+  position: absolute;
+  z-index: 1;
+  text-shadow: 1px 5px 20px slategray;
+  font-family: 'Staatliches', cursive;
+  }
+  .card-title2 {
+
+color: white;
+text-shadow: 1px 5px 20px slategray;
+font-family: 'Staatliches', cursive;
+text-align: center;
+  }
+  .movie
+  {
+   
+    font-style: italic;
+    position: absolute;
+    top: 54%;
+    left: 25%;
+  }
  /* Search Results card formatting */
 
 #search-results {
