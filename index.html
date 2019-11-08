@@ -10,19 +10,21 @@
     <meta property="og:description" content="Find movie recommendations from movies you already love" />
     <meta property="og:image" content="assets/img/SceneIt_sharethumb.png">
 
-    <link rel="stylesheet" type="text/css" href="assets/css/fullpage.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-
-    <script type="text/javascript" src="/assets/js/fullpage.js"></script>
     <script src="http://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
         crossorigin="anonymous"></script>
 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" type="text/css" href="assets/css/fullpage.css">
+        <script type="text/javascript" src="/assets/js/fullpage.js"></script>
+        
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="/assets/css/style.css">
+
     <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
     <link rel="icon" href="assets/img/sceneit_favicon.png" type="image/gif" sizes="32x32">
     <title>Scene.It - Your favorite movies</title>
@@ -110,11 +112,12 @@
 
             <div id="sec3" class="section"> 
                 <div class="container">
-                              <div id="user-favorites" class="row">
-                                  <div id="favorites-title"></div>
+                              <div id="user-favorites" class="row mx-auto">
                               </div>
 
-                              <div class="row home-card" id="search-bar">
+                              <div class="push"></div>
+
+                              <div class="row home-card fav-search" id="search-bar">
                                   <div class="card col-lg-12">
                                       <div class="card-body">
                                           <h2 class="card-title">Keep a list of your favorite movies!</h2>
@@ -192,7 +195,8 @@
         autoScrolling: false,
         scrollHorizontally: true,
         fitToSection: false,
-        normalScrollElement: true
+        navigation: true,
+        paddingTop: '60px'
     });
 </script>
         <!-- The core Firebase JS SDK is always required and must be listed first -->
