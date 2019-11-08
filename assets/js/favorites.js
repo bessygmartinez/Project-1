@@ -67,29 +67,23 @@ console.log("database");
 database.ref().on("child_added", function (snapshot) {
 
     let movieCard = $("<div>");
-    movieCard.attr("id", "fav");
-    movieCard.attr("class", "card fav-card col-sm-2 col-md-2 col-lg-2 fav-card animated delay-1s fadeIn");
+    movieCard.attr("class", "card fav-card col-sm-2 col-md-2 col-lg-2 animated delay-1s fadeIn");
 
     let cardRow = $("<div>");
-    cardRow.attr("id", "card-row");
     cardRow.attr("class", "row fav-row");
 
     let cardImageContainer = $("<div>");
-    cardImageContainer.attr("id", "card-image-container");
     cardImageContainer.attr("class", "col-sm-12 col-md-12 col-lg-12 fav-img-container");
 
     let cardImage = $("<img>");
-    cardImage.attr("id", "card-image");
-    cardImage.attr("class", "fav-poster");
+    cardImage.attr("class", "fav-poster img-fluid ");
     cardImage.attr("src", favPosterLink + snapshot.val().poster);
 
     let cardBodyContainer = $("<div>");
-    cardBodyContainer.attr("id", "card-body-container");
-    cardBodyContainer.attr("class", "col-sm-12 col-md-12 col-lg-12");
+    cardBodyContainer.attr("class", "fav-card-body-container col-sm-12 col-md-12 col-lg-12");
 
     let cardBody = $("<div>")
-    cardBody.attr("id", "card-body");
-    cardBody.attr("class", "card-body");
+    cardBody.attr("class", "fav-card-body");
     cardBody.append("<h4>" + snapshot.val().title + "</h4>");
     cardBody.append("<p>Average Rating: " + snapshot.val().movieRating + "</p>");
 
