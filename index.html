@@ -5,35 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="assets/css/fullpage.css">
+    <meta property="og:site_name" content="Scene.It" />
+    <meta property="og:title" content="Scene.It - Find Your Next Flick" />
+    <meta property="og:description" content="Find movie recommendations from movies you already love" />
+    <meta property="og:image" content="assets/img/SceneIt_sharethumb.png">
+
+    <script src="http://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/fullpage.css">
     <script type="text/javascript" src="/assets/js/fullpage.js"></script>
-    <script src="http://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-        crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="/assets/css/style.css">
+
     <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <link rel="icon" href="assets/img/sceneit_favicon.png" type="image/gif" sizes="32x32">
+    <title>Scene.It - Your favorite movies</title>
 </head>
 
 <body>
     <div id="fullpage">
+
+    <!-- Section 1 - Trending Movies -->
         <div id="sec1" class="section">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-md-8 title">
+                    <div class="col-lg-8 col-md-8 col-sm-8 title">
                         <div class="call-out">
                             <div class="verbiage">
                                 <h1 class="animated delay-short flipInX">Scene.It</h1>
-                                <p class="subhead animated delay-short flipInX"><a href="">Search for New Movies</a> |
-                                    <a href="">Search for Movie Reviews</a> | <a href="">Share & vote on your
-                                        favourites</a></p>
+                                <p class="subhead animated delay-short flipInX"><a href="#sec2">Search for Movies
+                                        Recommendations</a> |
+                                    <a href="#sec3">Search & Add Favorites</a> | <a href="#sec4">Meet the Scene.It
+                                        Team</a></p>
                             </div>
-                            <img class="animated delay-short bounceInRight hero" src="assets/img/GroovyDoodle.png"
+                            <img class="animated delay-short bounceInLeft hero" src="assets/img/GroovyDoodle_film.png"
                                 alt="">
                         </div>
                     </div>
@@ -44,43 +57,175 @@
                 </div>
             </div>
         </div>
+    <!-- End Section 1 -->
+
+    <!-- Section 2 - Recommendations-->
+            <!-- No Matches Modal -->
+            <div class="modal fade" id="no-matches-modal" tabindex="-1" data-show="true" role="alert"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel"></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h2>Sorry! No matches found.</h2>
+                            <h5>Please try another movie or check the spelling.</h5>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End No Matches Modal -->
 
         <div id="sec2" class="section">
             <div class="container">
-                <div class="row home-card">
+                <div id="search-results" class="row">
+                    <div id="user-input-title"></div>
+                    <div id="recommendations" class="row"></div>
+                </div>
+
+                <div class="row home-card" id="search-bar">
                     <div class="card col-lg-12">
                         <div class="card-body">
-                            <h2 class="card-title">Haven't seen it yet? Someone has!</h2>
-                            <p>Unsure of what to watch? There's nothing worse than sitting through a 2 hour movie only
-                                to decide you hate it halfway through.<br>Search for the latest movie reviews, new and
-                                old.</p>
+                            <h2 class="card-title">Find your next favorite movie!</h2>
+                                <p class="home-card-text">Not sure what you want to watch next? Enter a movie title you
+                                already love
+                                and we'll give you some comparable suggestions.<br>When your results pop up, click on a
+                                title to watch the trailer.
+                                </p>
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Find a movie review."
-                                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <input type="text" class="form-control" placeholder="Find a movie to watch"
+                                    id="search-input">
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="button">Button</button>
+                                    <button class="btn btn-dark" type="button" id="search-button">Search</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    <!-- End Section 2 -->
+
+    <!--- Begin Section 3 - Favorites --->
+        <div id="sec3" class="section">
+            <div class="container">
+                <div id="user-favorites" class="row mx-auto">
+                </div>
+
+                <div class="push"></div>
+
+                <div class="row home-card" id="fav-search">
+                    <div class="card col-lg-12">
+                        <div class="card-body">
+                            <h2 class="card-title">Keep a list of your favorite movies!</h2>
+                            <p class="home-card-text">Always forgetting the names of your favorite movies?<br>Or do you
+                                just want to have a list of the best films you've seen?<br>Look no further - search and
+                                add your favourite films.
+                            </p>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="What movie would you like to add?"
+                                    id="fav-input">
+                                <div class="input-group-append">
+                                    <button class="btn btn-dark" type="button" id="add-favorite">Search</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- End Section 3-->
+
+    <!-- Begin Section 4 - Team Page-->
+        <div id="sec4" class="section">
+            <div class="container" id="card-img-top">
+                <h2 id="tpageHead">MEET THE SCENE.IT TEAM</h2>
+                <div class="card-deck">
+                    <div class="card">
+                        <img src="assets/img/henry.jpg" class="card-img-top img-fluid" alt="henry">
+                        <div class="card-body">
+                            <h5 class="card-title2">Henry Sabio</h5>
+                            <div class="overlay">
+                                <p class="card-text"><strong>Favorite Movie Quote</strong> <br />"Your effort to remain
+                                    what you are is what limits you" </p><br />
+                                <p class="movie">- Ghost in the Shell</p>
+
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="assets/img/aimee.jpg" class="card-img-top img-fluid" alt="aimee">
+                        <div class="card-body">
+                            <h5 class="card-title2">Aimee Bojorquez</h5>
+                            <div class="overlay">
+
+                                <p class="card-text"><strong>Favorite Movie Quote </strong><br />"I'm not f*#$ing
+                                    leaving!"</p><br />
+                                <p class="movie">- Wolf of Wall Street</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="assets/img/miranda.jpg" class="card-img-top img-fluid" alt="miranda">
+                        <div class="card-body">
+                            <h5 class="card-title2">Miranda Hidalgo</h5>
+                            <div class="overlay">
+                                <p class="card-text"> <strong>Favorite Movie Quote </strong><br />"I shall call him
+                                    Squishy and he shall be mine and he shall be my Squishy. Come on, little Squishy"
+                                </p><br />
+                                <p class="movie"><br />- Finding Nemo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="assets/img/bessy.jpg" class="card-img-top img-fluid" alt="bessy">
+                        <div class="card-body">
+                            <h5 class="card-title2">Bessy Martinez</h5>
+                            <div class="overlay">
+                                <p class="card-text"><strong>Favorite Movie Quote</strong>
+                                    <space /><br />"You're my boy blue!!" <br /></p>
+                                <p class="movie">- Old School</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+
 
         </div>
 
-
-        <script src="assets/js/sceneit.js"></script>
         <script>
-
             new fullpage('#fullpage', {
                 licenseKey: null,
                 //options here
                 autoScrolling: false,
                 scrollHorizontally: true,
                 fitToSection: false,
-                normalScrollElement: true
+                navigation: true,
+                paddingTop: '60px'
             });
         </script>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <!-- <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase.js"></script> -->
+
+        <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-database.js"></script>
+
+        <script src="assets/js/sceneit.js"></script>
+        <script src="assets/js/search.js"></script>
+        <script src="assets/js/favorites.js"></script>
+
 </body>
 
 </html>

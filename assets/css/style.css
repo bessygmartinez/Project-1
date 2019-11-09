@@ -1,21 +1,19 @@
 a {
-    color: white !important;
+    color: white;
     text-decoration: none;
-    text-decoration-line: underline !important;
+    text-decoration-line: underline;
 }
 
 a::before,
 a::after,
 a:hover {
-    color: white !important;
+    color: white;
     text-decoration: none;
 }
 
 .section {
     text-align:center;
     font-size: 3em;
-    padding-top: 125px;
-    padding-bottom: 150px;
     overflow: hidden;
 }
 
@@ -26,7 +24,7 @@ a:hover {
 
 .title {
     position: relative;
-    top: 250px;
+    top: 290px;
 }
 
 img.hero {
@@ -38,7 +36,7 @@ img.hero {
 
 h1 {
     color: white;
-    font-size: 4.5em !important;
+    font-size: 4.5em;
     position: absolute;
     z-index: 1;
     text-shadow: 1px 5px 20px slategray;
@@ -55,6 +53,10 @@ p.subhead {
     top: 225px;
 }
 
+p {
+    font-size: 12px;
+}
+
 h2 {
     color: darkslategrey;
 }
@@ -65,13 +67,6 @@ h6 {
     font-size: 14px;
 }
 
-p {
-    color: darkslategrey;
-    font-size: .35em !important;
-    text-align: left;
-}
-
-
 #sec1 {
     background-image: url('../img/mainsec.jpg');
     background-attachment: fixed;
@@ -80,20 +75,34 @@ p {
 
 #sec2 {
     background-image: url('../img/sec1.jpg');
-    background-attachment: fixed;
+    background-size: cover;
+}
+
+#sec3 {
+    background-image: url('../img/sec3.jpg');
+    background-size: cover;
+}
+
+#sec4 {
+    background-image: url('../img/sec1.jpg');
     background-size: cover;
 }
 
 .home-card {
     position: absolute;
-    bottom: 0;
+    bottom:0;
+    width: 75%;
 }  
+
+p.home-card-text {
+    font-size: 18px;
+}
 
 /* Trending card formatting */
 
 #trending-movies {
     position: relative;
-    top: 150px;
+    top: 190px;
     padding-left: 15px;
 }
 
@@ -104,16 +113,11 @@ p {
 #trending {
     position: relative;
     top: 10px;
-    margin-bottom: 100px;
 }
 
-.row {
+.trending-row {
     margin: 0;
 }
-
-.card {
-    height: 113px;
- }
 
 #trending-title {
     color: lightgray;
@@ -125,6 +129,7 @@ p {
     margin-left: 10px !important;
     margin-right: 10px !important;
     min-width: 210px;
+    height: 113px;
 }
 
 #trending-0 {
@@ -135,7 +140,7 @@ p {
     margin-right: 0 !important;
  }
 
- .card-title {
+ .trend-card-title {
     text-align: left;
  }
 
@@ -145,4 +150,645 @@ p {
      margin-bottom: -1px;
      margin-left: -20px;
      border-radius: 5px 0 0 5px;
+ }
+
+ /* Search Results card formatting */
+
+#search-results {
+    position: relative;
+    top: -120px;
+    padding: 0px;
+}
+
+.search-title {
+    color: black;
+    text-shadow: 1px 5px 20px slategray;
+    font-family: 'Staatliches', cursive;
+    margin-top: 5%;
+}
+
+.search-card {
+    font-size: 2.5vh;
+    margin-top: 30px !important;
+    margin-bottom:0px !important;
+    margin-left: 30px !important;
+    min-width: 230px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-bottom: 0px !important;
+    line-height: 1;
+}
+
+a.search-card {
+    text-align: center;
+    color: black !important;
+    text-shadow: 1px 5px 20px slategray;
+    font-family: 'Staatliches', cursive;
+    margin: 5px !important;
+}
+
+a.search-card:hover {
+    text-align: center;
+    color: white !important;
+    background-color: #706efd;
+    text-shadow: 1px 5px 20px slategray;
+    font-family: 'Staatliches', cursive;
+    margin: 5px !important;
+}
+
+#search-body-container-0,
+#search-body-container-1,
+#search-body-container-2,
+#search-body-container-3 {
+    margin-left:-1px;
+    margin-right:-1px;
+}   
+
+img.search-movie-poster  {
+    margin-top: 15px;
+    margin-bottom: -20px;
+    padding-bottom: -20px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+#recommendations {
+    position: relative;
+    top: 5px;
+    margin-left:2%;
+}
+
+#user-input-title {
+    position: absolute;
+    margin-left: 0;
+    margin-top: -30px;
+    font-size: 0.7em;
+    color: black !important;
+    text-shadow: 1px 5px 20px slategray;
+    font-family: 'Staatliches', cursive;
+}
+
+/* User Favorites */
+
+#user-favorites {
+    margin-top: 0px;
+    margin-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 55px;
+    align-content: center !important;
+}
+
+
+.fav-card {
+    margin: 10px;
+    min-width: 230px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+#fav-search {
+    margin-top: 100px;
+}
+
+.fav-img-container {
+    padding: 0 !important;
+}
+
+img.fav-poster {
+    max-width: 200px;
+}
+
+.push {
+    padding: 70px;
+}
+
+/* Team Page */
+
+#effects {
+    position: relative;
+    width: 50%;
+}
+  
+.card-img-top {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+  
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 335px;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(243, 239, 239, 0.76);
+}
+  
+.card:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+ }
+  
+.card-text {
+    color:black;
+    font-size: 10px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 95%;
+    vertical-align: middle;
+}
+
+#tpageHead {
+    top: 10%;
+    color: white;
+    font-size: 1.5em !important;
+    position: absolute;
+    z-index: 1;
+    text-shadow: 1px 5px 20px slategray;
+    font-family: 'Staatliches', cursive;
+}
+
+.card-title2 {
+    color: darkslategray;
+    text-shadow: 1px 5px 20px slategray;
+    font-family: 'Staatliches', cursive;
+    text-align: center;
+}
+
+.movie {
+    font-style: italic;
+    position: absolute;
+    top: 54%;
+    left: 25%;
+}
+
+/***** MEDIA QUERIES BELOW *****/
+
+ @media only screen and (max-width: 900px) {
+
+    .call-out {
+        position: absolute;
+        bottom: -20px;
+    }
+    
+    .title {
+        position: relative;
+        top: 40px;
+    }
+    
+    img.hero {
+        width: 100%;
+        position: relative;
+        bottom: 90px;
+        left: 300px;
+    }
+    
+    h1 {
+        color: white;
+        font-size: 3em;
+        position: absolute;
+        z-index: 1;
+        text-shadow: 1px 5px 20px slategray;
+        font-family: 'Staatliches', cursive;
+    }
+
+    p.subhead {
+        color: white;
+        position: absolute;
+        font-size: 1.5vh !important;
+        letter-spacing: 1.5px;
+        z-index: 1;
+        text-shadow: 1px 5px 20px slategray;
+        top: 40% !important;
+    }
+
+    .home-card {
+        position: absolute;
+        bottom: 0;
+        width: 90%;
+    }
+
+ /* Trending card formatting */
+
+    #trending-movies {
+        position: relative;
+        top: -40px;
+        padding-left: 15px;
+    }
+
+    #trending-title {
+        text-align: left;
+    }
+
+    #trending {
+        position: relative;
+        top: 0px;
+    }
+
+    .trending-row {
+        margin: 0;
+    }
+
+    #trending-title {
+        color: lightgray;
+        text-shadow: 1px 5px 20px slategray;
+        font-family: 'Staatliches', cursive;
+    }
+
+    .trending-card {
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+        min-width: 210px;
+        height: 113px;
+    }
+
+    #trending-0,
+    #trending-1,
+    #trending-2,
+    #trending-3
+     {
+        margin-left: 100px !important;
+        margin-bottom: 3px;
+    }
+
+    .trend-card-title {
+        text-align: left;
+    }
+
+    img.movie-poster {
+        width: 75px;
+        margin-top: -1px;
+        margin-bottom: -1px;
+        margin-left: -20px;
+        border-radius: 5px 0 0 5px;
+    }
+
+/* Search Results card formatting */
+
+    #search-results {
+        top: -25px;
+        margin-bottom: 275px
+    }
+
+    .search-card {
+        font-size: 2.3vh;
+        margin-top: 30px !important;
+        margin-bottom:0px !important;
+        margin-left: 30px !important;
+        max-width: auto;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        padding-bottom: 0px !important;
+        line-height: 1;
+    }
+
+    a.search-card {
+        text-align: center;
+        color: black !important;
+        text-shadow: 1px 5px 20px slategray;
+        font-family: 'Staatliches', cursive;
+        margin: 5px !important;
+    }
+
+    a.search-card:hover {
+        text-align: center;
+        color: white !important;
+        background-color: #706efd;
+        text-shadow: 1px 5px 20px slategray;
+        font-family: 'Staatliches', cursive;
+        margin: 5px !important;
+    }
+
+    img.search-movie-poster  {
+        max-width: 100%;
+        margin-top: 15px;
+        margin-bottom: -20px;
+        padding-bottom: -20px;
+        border-radius: 0px 0px 5px 5px;
+    }
+
+    #recommendations {
+        position: relative;
+        top: 5px;
+        margin-left:10%;
+    }
+
+    #user-input-title {
+        position: absolute;
+        margin-left: 0;
+        margin-top: -30px;
+        font-size: 0.7em;
+        color: black !important;
+        text-shadow: 1px 5px 20px slategray;
+        font-family: 'Staatliches', cursive;
+    }
+
+/* User Favorites */
+
+h4 {
+    font-size: 2vh;
+}
+
+#user-favorites {
+    margin-top: 10px;
+    margin-bottom: 20%;
+    padding-top: 0px;
+    padding-bottom: 1%;
+    align-content: center !important;
+}
+
+.fav-card {
+    margin: 15px;
+}
+
+/* Team Page */
+
+#tpageHead {
+    top: 10%;
+    font-size: 6vh !important;
+}
+
+.card-title2 {
+    font-size: 2.5vh;
+}
+
+.overlay {
+    height:auto;
+}
+  
+.card-text {
+    color:black;
+    font-size: 1.5vh;
+    position: absolute;
+}
+
+.movie {
+    font-size: 1.5vh;
+    font-style: italic;
+    position: absolute;
+    top: 60%;
+    margin-left: 0.1%;
+}
+
+.card-deck {
+    margin-top: -40%;
+}
+
+ }
+
+ @media only screen and (max-width: 500px) {
+
+    .call-out {
+        position: absolute;
+        bottom: 0px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    .title {
+        position: relative;
+        top: 120px;
+    }
+    
+    img.hero {
+        width: 80%;
+        position: relative;
+        bottom: 80px;
+        margin-left: -130%;
+    }
+
+    p.subhead {
+        color: white;
+        position: absolute;
+        font-size: 1.5vh !important;
+        letter-spacing: 1.5px;
+        z-index: 1;
+        text-shadow: 1px 5px 20px slategray;
+        top: 38% !important;
+    }
+
+
+    /* Trending card formatting */
+
+    #trending-movies {
+        position: relative;
+        top: 40px !important;
+        padding-left: 0px;
+    }
+
+    #trending-title {
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    #trending {
+        position: relative;
+        top: 0;
+    }
+
+    .trending-row {
+        margin: 0;
+    }
+
+    #trending-title {
+        color: lightgray;
+        text-shadow: 1px 5px 20px slategray;
+        font-family: 'Staatliches', cursive;
+    }
+
+    .trending-card {
+        margin-left: 0px !important;
+        margin-right: 10px !important;
+        max-width: 200px;
+        height: auto;
+        margin-bottom: 1%;
+    }
+
+    #trending-0,
+    #trending-1,
+    #trending-2,
+    #trending-3
+     {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .trend-card-title {
+        text-align: left;
+    }
+
+    #card-body-0,
+    #card-body-1,
+    #card-body-2,
+    #card-body-3 {
+        margin-top: -60% !important;
+        margin-left: 50% !important;
+        padding: 0px !important;
+    }
+
+    img.movie-poster {
+        max-width: 50%;
+        margin-top: -1px;
+        margin-bottom: -1px;
+        margin-left: -77%;
+        border-radius: 5px 0 0 5px;
+    }
+
+    /* Search Results card formatting */
+
+    .home-card {
+        position: absolute;
+        bottom: 30px;
+        width: 100%;
+    }
+
+    #search-body-container-0,
+    #search-body-container-1,
+    #search-body-container-2,
+    #search-body-container-3 {
+    margin-left:-70px;
+    margin-right:-70px;
+    }
+
+
+    #recommendations {
+        top: -50px;
+        margin-bottom: 25%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    #user-input-title {
+        display: none;
+    }
+
+    .search-card {
+        font-size: 4.5vw;
+        overflow: hidden;
+        margin-right: 8%;
+        max-width: 80%;
+    }
+
+    a.search-card {
+        text-align: center;
+        font-size: 4.5vw;
+        color: black !important;
+        text-shadow: 1px 5px 20px slategray;
+        font-family: 'Staatliches', cursive;
+        margin: 5px !important;
+    }
+    
+    a.search-card:hover {
+        text-align: center;
+        font-size: 4.5vw;
+        color: white !important;
+        background-color: #706efd;
+        text-shadow: 1px 5px 20px slategray;
+        font-family: 'Staatliches', cursive;
+        margin: 5px !important;
+    }
+
+    img.search-movie-poster  {
+        max-width: 75%;
+    }
+
+/* User Favorites */
+
+h4 {
+    font-size: 2vh;
+}
+
+#user-favorites {
+    margin-top: -50px;
+    margin-bottom: 190px;
+    padding-top: 0px;
+    padding-bottom: 15%;
+    align-content: center !important;
+}
+
+.fav-card {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    max-width: 30%;
+}
+
+#fav-search {
+    margin-top: 5%;
+}
+
+.fav-card-body-container{
+    padding:0px;
+    margin:0px;
+}
+
+.fav-img-container {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+img.fav-poster {
+    max-width: auto;
+}
+
+.push {
+    padding: 70px;
+}
+
+/* Team Page */
+
+#tpageHead {
+    top: 0.5%;
+    font-size: 5vh !important;
+
+}
+
+.card-deck {
+    margin-top: 10px;
+}
+
+#effects {
+    position: relative;
+    width: 50%;
+}
+  
+.card-img-top {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+  
+.overlay {
+    height: auto;
+}
+
+.card-title2 {
+    font-size: 4vh;
+}
+  
+.card-text {
+    color:black;
+    font-size: 3vh;
+    position: absolute;
+}
+
+.movie {
+    font-size: 2.5vh;
+    font-style: italic;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+}
+
  }

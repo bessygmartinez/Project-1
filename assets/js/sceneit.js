@@ -46,15 +46,15 @@ $(document).ready(function () {
 
                     let movieCard = $("<div>");
                     movieCard.attr("id", "trending-" + i);
-                    movieCard.attr("class", "card col-sm-2 col-md-2 col-lg-2 trending-card animated delay-1s fadeIn");
+                    movieCard.attr("class", "card trend-card col-sm-2 col-md-2 col-lg-2 trending-card animated delay-1s fadeIn");
 
                     let cardRow = $("<div>");
                     cardRow.attr("id", "card-row-" + i);
-                    cardRow.attr("class", "row");
+                    cardRow.attr("class", "row trending-row");
 
                     let cardImageContainer = $("<div>");
                     cardImageContainer.attr("id", "card-image-container-" + i);
-                    cardImageContainer.attr("class", "col-md-4 col-lg-4");
+                    cardImageContainer.attr("class", "col-sm-4 col-md-4 col-lg-4");
 
                     let cardImage = $("<img>");
                     cardImage.attr("id", "card-image-" + i);
@@ -63,7 +63,7 @@ $(document).ready(function () {
 
                     let cardBodyContainer = $("<div>");
                     cardBodyContainer.attr("id", "card-body-container-" + i);
-                    cardBodyContainer.attr("class", "col-md-8 col-lg-8");
+                    cardBodyContainer.attr("class", "col-sm-8 col-md-8 col-lg-8");
 
                     let cardBody = $("<div>")
                     cardBody.attr("id", "card-body-" + i);
