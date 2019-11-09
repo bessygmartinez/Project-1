@@ -12,14 +12,14 @@ Add your favorite movies or movies you'd like to watch.
 
 ## Built With...
 
-- [Bootstrap 4.3.1] (https://getbootstrap.com/)
-- [fullPage.js] (https://alvarotrigo.com/fullPage/)
-- [jQuery] (https://jquery.com/)
+- [Bootstrap 4.3.1](https://getbootstrap.com/)
+- [fullPage.js](https://alvarotrigo.com/fullPage/)
+- [jQuery](https://jquery.com/)
 
 ## Featuring...
 
-- [The Taste Dive public API] (https://tastedive.com/read/api)
-- [The Movie DB] (!https://developers.themoviedb.org/)
+- [The Taste Dive public API](https://tastedive.com/read/api)
+- [The Movie DB](https://developers.themoviedb.org/)
 
 
 ## The Scene.It Team
