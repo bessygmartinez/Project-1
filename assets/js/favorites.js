@@ -22,9 +22,9 @@ let favPosterLink = "https://image.tmdb.org/t/p/w300_and_h450_bestv2/";
 
 // Capture Button Click
 $("#add-favorite").on("click", function (event) {
+    
     // Don't refresh the page!
     event.preventDefault();
-    console.log("click");
 
     // Begin API Query
     const favInput = $("#fav-input").val().trim();
@@ -57,6 +57,7 @@ $("#add-favorite").on("click", function (event) {
 
         });
     console.log("test");
+    $("#fav-input").val("");
 
 })
 
@@ -94,8 +95,3 @@ database.ref().on("child_added", function (snapshot) {
     cardBodyContainer.append(cardBody);
 
     $("#user-favorites").append(movieCard);
-
-    // $("#favorites-title").append(snapshot.val().title);
-    // $("#favorites-title").append(favPosterLink + snapshot.val().poster);
-    // $("#favorites-title").append(snapshot.val().movieRating);
-})
