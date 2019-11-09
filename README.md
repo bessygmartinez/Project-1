@@ -21,7 +21,7 @@ Add your favorite movies or movies you'd like to watch.
 ## Featuring...
 
 - [The Taste Dive public API](https://tastedive.com/read/api)
-- [The Movie DB](https://developers.themoviedb.org/)
+- [The Movie DB API](https://developers.themoviedb.org/)
 
 
 ## The Scene.It Team
