@@ -24,7 +24,7 @@ $(document).ready(function () {
     $("#search-input").attr("placeholder", "Find a movie to watch");
 
     //sends request to TasteDive with whatever the user entered in the search bar
-    const queryURL = "https://tastedive.com/api/similar?info=1&q=" + userInput + "&key=348832-SceneIt-PVCNCAHY&type=movies";
+    const queryURL = "https://cors-anywhere.herokuapp.com/https://tastedive.com/api/similar?info=1&q=" + userInput + "&key=348832-SceneIt-PVCNCAHY&type=movies";
 
     //AJAX grabs the data and then...
     $.ajax({
