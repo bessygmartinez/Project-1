@@ -3,11 +3,11 @@ A web app to find movie recommendations and store your favorites.
 ![Scene.It](https://raw.githubusercontent.com/bessygmartinez/Scene-It/master/assets/img/SceneIt_sharethumb.png)
 
 ## Search for movie recommendations
-Find movies to watch by search with a movie you already like.
+Find movies to watch by searching with a movie you already like.
 ![Scene.It](https://raw.githubusercontent.com/bessygmartinez/Scene-It/master/assets/img/search_screenshot.jpg)
 
 ## Add your favorite movies
-Add movies you already love or want to watch.
+Add your favorite movies or movies you'd like to watch.
 ![Scene.It](https://raw.githubusercontent.com/bessygmartinez/Scene-It/master/assets/img/favorites_screenshot.jpg)
 
 ## Built With...
