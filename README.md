@@ -13,8 +13,10 @@ Add your favorite movies or movies you'd like to watch.
 ## Built With...
 
 - [Bootstrap 4.3.1](https://getbootstrap.com/)
+- [Animate.css](https://daneden.github.io/animate.css/)
 - [fullPage.js](https://alvarotrigo.com/fullPage/)
-- [jQuery](https://jquery.com/)
+- [jQuery 3.4.1](https://jquery.com/)
+- [Google Firebase](https://firebase.google.com/)
 
 ## Featuring...
 
