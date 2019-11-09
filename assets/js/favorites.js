@@ -95,3 +95,8 @@ database.ref().on("child_added", function (snapshot) {
     cardBodyContainer.append(cardBody);
 
     $("#user-favorites").append(movieCard);
+
+    // $("#favorites-title").append(snapshot.val().title);
+    // $("#favorites-title").append(favPosterLink + snapshot.val().poster);
+    // $("#favorites-title").append(snapshot.val().movieRating);
+})
